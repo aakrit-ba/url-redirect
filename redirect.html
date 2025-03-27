@@ -9,13 +9,13 @@
             const urlParams = new URLSearchParams(window.location.search);
             const hasAgreed = urlParams.has('agreed') && urlParams.get('agreed') === 'true';
 
-            if (!hasAgreed) {
+            if (hasAgreed) {
                 // Redirect to a different page if agreement is missing
-                window.location.replace("https://www.lexcorp.org.in"); // Change this to your preferred page
-            } else {
+                window.location.replace("https://home.lexcorp.org.in"); // Change this to your preferred page
+            } //else {
                 // Load Google Site only if agreed=true
-                window.location.replace("https://home.lexcorp.org.in");
-            }
+               // window.location.replace("https://home.lexcorp.org.in");
+            //}
         })();
     </script>
 </head>
